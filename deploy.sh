@@ -1,7 +1,7 @@
 ###
  # @Author: your name
  # @Date: 2021-11-18 19:19:56
- # @LastEditTime: 2021-11-18 19:29:24
+ # @LastEditTime: 2021-11-18 19:55:05
  # @LastEditors: Please set LastEditors
  # @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  # @FilePath: \vuepress-starter\docs\deploy.sh
@@ -9,12 +9,11 @@
 
 #!/user/bin/env.sh
 
-
 #确保脚本抛出遇到的错误
-set -env
+set -e
 
 #生成静态文件
-npm run docs:build
+npm run build
 
 #进入生成的文件夹
 cd docs/.vuepress/dist
