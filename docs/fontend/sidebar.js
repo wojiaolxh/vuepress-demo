@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-11-29 15:03:47
- * @LastEditTime: 2021-12-03 14:02:14
+ * @LastEditTime: 2021-12-03 16:21:48
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \VuePress\vuepress-starter\docs\.vuepress\slidebar.js
@@ -32,7 +32,8 @@ var slidebar=[
     collapsable: true, // 可选的, 默认值是 true,
     children:[
   
-      ['js/DebounceAndThrottle', '函数防抖和函数节流']
+      ['js/DebounceAndThrottle', '函数防抖和函数节流'],
+      ['js/DebounceAndThrottle', 'var和let/const的区别']
      
 
     ]
