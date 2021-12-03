@@ -1,7 +1,7 @@
 ###
  # @Author: your name
  # @Date: 2021-11-18 19:19:56
- # @LastEditTime: 2021-11-18 19:55:05
+ # @LastEditTime: 2021-11-30 19:45:45
  # @LastEditors: Please set LastEditors
  # @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  # @FilePath: \vuepress-starter\docs\deploy.sh
@@ -25,7 +25,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-#如果你想要部署到  https://USERNAME.github.io
+#如果你想要部署到  https://wojiaolxh/wojiaolxh.github.io
 git push -f git@github.com:wojiaolxh/wojiaolxh.github.io.git master
 
 #如果你想要部署到  https://USERNAME.github.io/[REPO] REPO=github上的项目
