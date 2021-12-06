@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-11-29 15:05:13
- * @LastEditTime: 2021-12-03 14:05:20
+ * @LastEditTime: 2021-12-06 14:45:01
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \VuePress\vuepress-starter\docs\.vuepress\nav.js
@@ -24,7 +24,7 @@ const nav = [ //导航栏配置
       },
       {
         text: 'vue积累',
-        link: 'https://github.com/OBKoro1/Brush_algorithm'
+        link: '/fontend/vue/'
       }
     ]
   },
