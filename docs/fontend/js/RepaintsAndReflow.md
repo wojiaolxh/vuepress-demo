@@ -32,14 +32,14 @@
 * `scrollTo()`
 
 ## 如何避免:
-###CSS
+### CSS
 * 避免使用`table`布局
 * 尽可能在`DOM`树的最末端改变`class`
 * 避免设置多层内联样式
 * 将动画效果应用到`position`属性为`absolute`或`fixed`的元素上。
 * 避免使用`CSS`表达式（例如：`calc()`）。
 
-###JavaScript
+### JavaScript
 * 避免频繁操作样式，最好一次性重写`style`属性，或者将样式列表定义为`class`并一次性更改`class`属性。
 * 避免频繁操作`DOM`，创建一个`documentFragment`，在它上面应用所有`DOM操作`，最后再把它添加到文档中。
 * 也可以先为元素设置`display: none`，操作结束后再把它显示出来。因为在`display`属性为`none`的元素上进行的`DOM`操作不会引发回流和重绘。
