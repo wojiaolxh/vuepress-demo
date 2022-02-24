@@ -122,7 +122,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
 ```
 
 
-#### pop() 删除一个数组中的最后的一个元素
+### pop() 删除一个数组中的最后的一个元素
 
 定义: pop() 方法删除一个数组中的最后的一个元素，并且返回这个元素。
 
@@ -131,7 +131,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
     let item = a.pop();  // 3
     console.log(a); // [1,2]
 ```
-#### shift() 删除数组的第一个元素
+### shift() 删除数组的第一个元素
 定义: shift()方法删除数组的第一个元素，并返回这个元素。
 ```js
      let  a =  [1,2,3];
@@ -139,7 +139,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
      console.log(a); // [2,3]
 ```
 
-#### push() 向数组的末尾添加元素
+### push() 向数组的末尾添加元素
 定义: push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。
 参数: item1, item2, ..., itemX ,要添加到数组末尾的元素
 
@@ -148,7 +148,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
       let item = a.push('末尾');  // 4
       console.log(a); // [1,2,3,'末尾']
 ```
-#### unshift() 方法可向数组的开头添加一个或更多元素
+### unshift() 方法可向数组的开头添加一个或更多元素
 定义: push() 方法可向数组的开头添加一个或更多元素，并返回新的长度。
 参数: item1, item2, ..., itemX ,要添加到数组开头的元素
 
@@ -157,7 +157,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
       let item = a.push('开头');  // 4
      console.log(a); // ['开头',1,2,3]
 ```
-#### reverse() 颠倒数组中元素的顺序
+### reverse() 颠倒数组中元素的顺序
 定义: reverse() 颠倒数组中元素的顺序
 
 ```js
@@ -166,7 +166,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
         console.log(a); // [3,2,1]
 ```
 
-#### ES6: copyWithin() 指定位置的成员复制到其他位置
+### ES6: copyWithin() 指定位置的成员复制到其他位置
 
 定义: 在当前数组内部，将指定位置的成员复制到其他位置,并返回这个数组。
 
@@ -187,7 +187,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
 ```
 
 
-#### ES6: fill() 填充数组
+### ES6: fill() 填充数组
 定义: 使用给定值，填充一个数组。
 
 参数:
@@ -205,7 +205,7 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
 
 ## 不改变原数组的方法(8个):
 
-#### slice() 浅拷贝数组的元素
+### slice() 浅拷贝数组的元素
 定义:  方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象，且原数组不会被修改。
 语法:  array.slice(begin, end);
 
@@ -239,7 +239,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 原因在定义上面说过了的：slice()是浅拷贝，对于复杂的数据类型浅拷贝，拷贝的只是指向原数组的指针，所以无论改变原数组，还是浅拷贝的数组，都是改变原数组的数据。
 
 
-#### join() 数组转字符串
+### join() 数组转字符串
 定义: join() 方法用于把数组中的所有元素通过指定的分隔符进行分隔放入一个字符串，返回生成的字符串。
 语法:  array.join(str)
 参数: str(可选): 指定要使用的分隔符，默认使用逗号作为分隔符。
@@ -259,7 +259,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 所以，join()/toString()方法在数组元素是数组的时候，会将里面的数组也调用join()/toString(),如果是对象的话，对象会被转为[object Object]字符串。
 
 
-#### toLocaleString() 数组转字符串
+### toLocaleString() 数组转字符串
 定义: 返回一个表示数组元素的字符串。该字符串由数组中的每个元素的 toLocaleString() 返回值经调用 join() 方法连接（由逗号隔开）组成。
 
 语法:  array.toLocaleString()
@@ -269,7 +269,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 ```
 如上述栗子：调用数组的toLocaleString方法，数组中的每个元素都会调用自身的toLocaleString方法，对象调用对象的toLocaleString,Date调用Date的toLocaleString。
 
-#### toString() 数组转字符串 不推荐
+### toString() 数组转字符串 不推荐
 定义: toString() 方法可把数组转换为由逗号链接起来的字符串。
 语法: array.toString()
 该方法的效果和join方法一样，都是用于数组转字符串的，但是与join方法相比没有优势，也不能自定义字符串的分隔符，因此不推荐使用。
@@ -279,7 +279,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
    let a= ['调用toString','连接在我后面']+'啦啦啦'; // 调用toString,连接在我后面啦啦啦
 ```
 
-#### cancat() 方法用于合并两个或多个数组，返回一个新数组。
+### cancat() 方法用于合并两个或多个数组，返回一个新数组。
 
 定义： 方法用于合并两个或多个数组，返回一个新数组。
 语法： var newArr =oldArray.concat(arrayX,arrayX,......,arrayX)
@@ -303,7 +303,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ```
 
-#### indexOf() 查找数组是否存在某个元素，返回下标
+### indexOf() 查找数组是否存在某个元素，返回下标
 定义: 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。
 
 语法: array.indexOf(searchElement,fromIndex)
@@ -319,7 +319,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 ```   
 **注意：** indexOf()不能识别NaN
 
-#### lastIndexOf() 查找指定元素在数组中的最后一个位置
+### lastIndexOf() 查找指定元素在数组中的最后一个位置
 定义: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）
 
 语法: arr.lastIndexOf(searchElement,fromIndex)
@@ -340,7 +340,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
  let b=a.lastIndexOf('Koro1',-9); // 从第二个元素4往前查找，没有找到 返回-1
 
 ```
-#### ES7 includes() 查找数组是否包含某个元素 返回布尔
+### ES7 includes() 查找数组是否包含某个元素 返回布尔
 定义：返回一个布尔值，表示某个数组是否包含给定的值
 语法：array.includes(searchElement,fromIndex=0)
 参数：searchElement(必须):被查找的元素
@@ -361,7 +361,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 
 ## 遍历方法(12个):
-#### forEach
+### forEach
 定义: 按升序为数组中含有效值的每一项执行一次回调函数。
 语法：array.forEach(function(currentValue, index, arr), thisValue)
 参数: function(必须): 数组中每个元素需要调用的函数。
@@ -389,7 +389,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
     // 回调函数也接受接头函数写法
 
 ```
-#### every 检测数组所有元素是否都符合判断条件
+### every 检测数组所有元素是否都符合判断条件
 定义: 方法用于检测数组所有元素是否都符合函数定义的条件
 语法：array.every(function(currentValue, index, arr), thisValue)
 方法返回值规则:
@@ -407,7 +407,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
     [12, 54, 18, 130, 44].every(x => x >= 10); // true
 
 ```
-#### some 数组中的是否有满足判断条件的元素
+### some 数组中的是否有满足判断条件的元素
 定义：数组中的是否有满足判断条件的元素
 语法：array.some(function(currentValue, index, arr), thisValue)
 参数:(这几个方法的参数，语法都类似)
@@ -423,7 +423,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ```
 
-#### filter 过滤原始数组，返回新数组
+### filter 过滤原始数组，返回新数组
 定义: 返回一个新数组, 其包含通过所提供函数实现的测试的所有元素。
 语法： let new_array = arr.filter(function(currentValue, index, arr), thisArg)
 ```js
@@ -435,7 +435,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ```
 
-#### map 对数组中的每个元素进行处理，返回新的数组
+### map 对数组中的每个元素进行处理，返回新的数组
 定义: 创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。
 语法： let new_array = arr.map(function(currentValue, index, arr), thisArg)
 ```js
@@ -448,7 +448,7 @@ console.log(result, a);
 
 
 ```
-#### reduce 为数组提供累加器，合并为一个值
+### reduce 为数组提供累加器，合并为一个值
 定义: reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，最终合并为一个值。
 语法：array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 参数：1,total(必须)，初始值, 或者上一次调用回调返回的值
@@ -472,9 +472,9 @@ console.log(result, a);
 
 
 ```
-#### reduceRight 从右至左累加
+### reduceRight 从右至左累加
 这个方法除了与reduce执行方向相反外，其他完全与其一致，请参考上述 reduce 方法介绍。
-#### ES6：find()& findIndex() 根据条件找到数组成员
+### ES6：find()& findIndex() 根据条件找到数组成员
 find()定义：用于找出第一个符合条件的数组成员，并返回该成员，如果没有符合条件的成员，则返回undefined。
 findIndex()定义：返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
 
@@ -497,7 +497,7 @@ findIndex()定义：返回第一个符合条件的数组成员的位置，如果
 
 
 ```
-#### ES6 keys()&values()&entries() 遍历键名、遍历键值、遍历键名+键值
+### ES6 keys()&values()&entries() 遍历键名、遍历键值、遍历键名+键值
 定义：三个方法都返回一个新的 Array Iterator 对象，对象根据方法不同包含不同的值。
 语法：
 ```js

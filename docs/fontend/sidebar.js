@@ -35,6 +35,10 @@ var slidebar=[
       ['js/DeclareVariable', 'var和let/const的区别'],
       ['js/ArrowFun', '箭头函数和普通函数的区别'],
       ['js/ArrayApi', '数组Api合集'],
+      ['js/DataCache', '浏览器缓存'],
+      ['js/RepaintsAndReflow', '重绘和重排'],
+      ['js/CallApplyBind', 'call,apply,bind'],
+      ['js/BasicType', 'js基本类型和引用数据类型'],
     ]
   },
   {
