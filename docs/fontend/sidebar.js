@@ -39,6 +39,7 @@ var slidebar=[
       ['js/RepaintsAndReflow', '重绘和重排'],
       ['js/CallApplyBind', 'call,apply,bind'],
       ['js/BasicType', 'js基本类型和引用数据类型'],
+      ['js/Prototype', '原型、原型链'],
     ]
   },
   {

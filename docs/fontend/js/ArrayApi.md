@@ -171,8 +171,11 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
 定义: 在当前数组内部，将指定位置的成员复制到其他位置,并返回这个数组。
 
 参数:三个参数都是数值，如果不是，会自动转为数值.
+
    1,target（必需）：从该位置开始替换数据。如果为负值，表示倒数。
+   
    2,start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示倒数。
+   
    3,end（可选）：到该位置前停止读取数据，默认等于数组长度。使用负数可从数组结尾处规定位置。
    
    ```js
@@ -192,7 +195,9 @@ var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},
 
 参数:
  1,第一个元素（必需）：要填充数组的值。
+ 
    2,start（可选）：填充的开始位置,默认值为0
+   
    3,end（可选）：填充的结束位置，默认是为this.length。
    
    ```js
@@ -330,7 +335,9 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
       
 关于fromIndex有三个规则:      
 1,正值。如果该值大于或等于数组的长度，则整个数组会被查找。
+
 2,负值。将其视为从数组末尾向前的偏移。(比如-2，从数组最后第二个元素开始往前查找)
+
 3,正值。负值。其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。
 ```js
  let a=['OB',4,'Koro1',1,2,'Koro1',3,4,5,'Koro1']; // 数组长度为10
@@ -341,13 +348,19 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ```
 ### ES7 includes() 查找数组是否包含某个元素 返回布尔
+
 定义：返回一个布尔值，表示某个数组是否包含给定的值
+
 语法：array.includes(searchElement,fromIndex=0)
+
 参数：searchElement(必须):被查找的元素
-      fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索。
+
+fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索。
+
 **includes方法是为了弥补indexOf方法的缺陷而出现的:**
 
-1，indexOf方法不能识别NaN
+1，
+
 2，indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观
 
 ```js
@@ -363,15 +376,23 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 ## 遍历方法(12个):
 ### forEach
 定义: 按升序为数组中含有效值的每一项执行一次回调函数。
+
 语法：array.forEach(function(currentValue, index, arr), thisValue)
+
 参数: function(必须): 数组中每个元素需要调用的函数。
+
       1. currentValue(必须),数组当前元素的值
+      
       2. index(可选), 当前元素的索引值
+      
       3. arr(可选),数组对象本身
+      
       thisValue(可选): 当执行回调函数时this绑定对象的值，默认值为undefined
 
 **关于forEach()你要知道：**
+
 * 无法中途退出循环，只能用return退出本次回调，进行下一次回调。
+
 * 它总是返回 undefined值,即使你return了一个值。
 ```js
   let a = [1, 2, ,3]; // 最后第二个元素是空的，不会遍历(undefined、null会遍历)
@@ -391,9 +412,13 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 ```
 ### every 检测数组所有元素是否都符合判断条件
 定义: 方法用于检测数组所有元素是否都符合函数定义的条件
+
 语法：array.every(function(currentValue, index, arr), thisValue)
+
 方法返回值规则:
+
 1,如果数组中检测到**有一个元素不满足，则整个表达式返回 false**，且剩余的元素不会再进行检测。
+
 2,如果所有元素**都满足条件**，**则返回 true。**=
 
 ```js
@@ -409,11 +434,17 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 ```
 ### some 数组中的是否有满足判断条件的元素
 定义：数组中的是否有满足判断条件的元素
-语法：array.some(function(currentValue, index, arr), thisValue)
+
+语法：array.some(function(currentValue, index, arr), thisValue
+
 参数:(这几个方法的参数，语法都类似)
+
 方法返回值规则：
+
 1,如果**有一个元素满足条件，则表达式返回true**, 剩余的元素不会再执行检测。
+
 2，如果**没有满足条件的元素，则返回false**。
+
 ```js
  function isBigEnough(element, index, array) {
    return (element >= 10); //数组中是否有一个元素大于 10
@@ -425,6 +456,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ### filter 过滤原始数组，返回新数组
 定义: 返回一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+
 语法： let new_array = arr.filter(function(currentValue, index, arr), thisArg)
 ```js
      let a = [32, 33, 16, 40];
@@ -437,6 +469,7 @@ end(可选):索引数值(不包括),接受负值，在该索引处前结束提�
 
 ### map 对数组中的每个元素进行处理，返回新的数组
 定义: 创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。
+
 语法： let new_array = arr.map(function(currentValue, index, arr), thisArg)
 ```js
 let a = ['1','2','3','4'];
@@ -450,12 +483,17 @@ console.log(result, a);
 ```
 ### reduce 为数组提供累加器，合并为一个值
 定义: reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，最终合并为一个值。
+
 语法：array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
 参数：1,total(必须)，初始值, 或者上一次调用回调返回的值
 
 回调第一次执行时:
+
 * 如果 initialValue 在调用 reduce 时被提供，那么第一个 total 将等于 initialValue，此时 currentValue 等于数组中的第一个值；
+
 * 如果 initialValue 未被提供，那么 total 等于数组中的第一个值，currentValue 等于数组中的第二个值。此时如果数组为空，那么将抛出 TypeError。
+
 * 如果数组仅有一个元素，并且没有提供 initialValue，或提供了 initialValue 但数组为空，那么回调不会被执行，数组的唯一值将被返回。
 ```js
   // 数组求和 
@@ -476,6 +514,7 @@ console.log(result, a);
 这个方法除了与reduce执行方向相反外，其他完全与其一致，请参考上述 reduce 方法介绍。
 ### ES6：find()& findIndex() 根据条件找到数组成员
 find()定义：用于找出第一个符合条件的数组成员，并返回该成员，如果没有符合条件的成员，则返回undefined。
+
 findIndex()定义：返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
 
 这两个方法
@@ -499,6 +538,7 @@ findIndex()定义：返回第一个符合条件的数组成员的位置，如果
 ```
 ### ES6 keys()&values()&entries() 遍历键名、遍历键值、遍历键名+键值
 定义：三个方法都返回一个新的 Array Iterator 对象，对象根据方法不同包含不同的值。
+
 语法：
 ```js
  array.keys()
@@ -525,6 +565,7 @@ for (let index of ['a', 'b'].keys()) {
     // 1 "b"
 ```
 在for..of中如果遍历中途要退出，可以使用break退出循环。
+
 如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历:
 ```js
   let letter = ['a', 'b', 'c'];
