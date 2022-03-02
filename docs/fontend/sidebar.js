@@ -23,6 +23,7 @@ var slidebar=[
     children:[
       ['css/', '目录'],
       ['css/BFC', 'CSSBFC'],
+      ['css/Flex', 'Flex布局'],
 
 
     ]
