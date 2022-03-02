@@ -63,7 +63,7 @@ justify-content: flex-start | flex-end | center | space-around | space-between |
 
 ![Image text](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bbc1f587b35248e8ac9e22c2f65e74e1~tplv-k3u1fbpfcp-watermark.awebp)
 
-### justify-content
+### align-items
 `align-items` 属性定义项目在交叉轴上如何对齐
 
 ```css

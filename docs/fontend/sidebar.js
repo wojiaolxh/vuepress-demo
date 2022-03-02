@@ -49,6 +49,8 @@ var slidebar=[
     children:[
       ['vue/', '目录'],
       ['vue/DefineGlobalFun', '定义全局函数'],
+      ['vue/Vuex', 'Vuex'],
+      ['vue/ComponentPassValue', 'Vue组件传值'],
 
     ]
   },
